@@ -1,0 +1,4 @@
+#Mon Dec 09 17:51:58 BRST 2019
+base.0=C\:\\GIT\\flutter-estacionamento\\flutter_estacionamento\\build\\app\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex
