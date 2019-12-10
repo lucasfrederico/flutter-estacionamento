@@ -1,6 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_estacionamento/pages/register.page.dart';
+import 'package:flutter_estacionamento/pages/welcome.page.dart';
 
 class LoginPage extends StatelessWidget {
+  Future goWelcomePage(context) async {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => WelcomePage()));
+  }
+
+  Future goRegisterPage(context) async {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => RegisterPage()));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -74,6 +86,19 @@ class LoginPage extends StatelessWidget {
             ),
           ),
           SizedBox(
+            height: 10,
+          ),
+          new InkWell(
+            child: Text(
+              'Não é cadastrado?',
+              style: TextStyle(
+                  color: Colors.lightBlue,
+                  decoration: TextDecoration.underline),
+              textAlign: TextAlign.end,
+            ),
+            onTap: () => goRegisterPage(context),
+          ),
+          SizedBox(
             height: 40,
           ),
           Container(
@@ -116,7 +141,7 @@ class LoginPage extends StatelessWidget {
                     )
                   ],
                 ),
-                onPressed: () => {},
+                onPressed: () => goWelcomePage(context),
               ),
             ),
           ),

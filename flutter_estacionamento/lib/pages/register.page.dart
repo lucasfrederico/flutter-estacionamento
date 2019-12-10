@@ -4,11 +4,9 @@ import 'package:flutter_estacionamento/pages/login.page.dart';
 import 'package:sweetalert/sweetalert.dart';
 
 class RegisterPage extends StatelessWidget {
-  void _redirectToLogin(BuildContext context) {
+  Future _redirectToLogin(BuildContext context) async {
     Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => LoginPage()),
-    );
+        context, MaterialPageRoute(builder: (context) => LoginPage()));
   }
 
   void _showSuccess(BuildContext context) {
@@ -25,7 +23,6 @@ class RegisterPage extends StatelessWidget {
 
   void _register(BuildContext context) {
     _showSuccess(context);
-//    _redirectToLogin(context);
   }
 
   @override
