@@ -23,7 +23,7 @@
         android:name="io.flutter.app.FlutterApplication"
         android:debuggable="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="flutter_estacionamento" >
+        android:label="CEDUP Estacionamento" >
         <activity
             android:name="me.lucasrodrigo.flutter_estacionamento.MainActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"

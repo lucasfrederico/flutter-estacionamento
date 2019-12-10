@@ -17,6 +17,7 @@ environment:
   sdk: ">=2.1.0 <3.0.0"
 
 dependencies:
+  sweetalert: any
   flutter:
     sdk: flutter
 
@@ -70,3 +71,8 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
+  assets:
+    - assets/logo.png
+    - assets/car.png
+    - assets/row-login.png
