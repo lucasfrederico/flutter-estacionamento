@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "F:\\GIT\\flutter-estacionamento\\flutter_estacionamento\\build\\app\\intermediates\\res\\merged\\debug\\values_values.arsc.flat",
+            "outputFile": "C:\\GIT\\flutter-estacionamento\\flutter_estacionamento\\build\\app\\intermediates\\res\\merged\\debug\\values_values.arsc.flat",
             "map": [
                 {
-                    "source": "F:\\GIT\\flutter-estacionamento\\flutter_estacionamento\\android\\app\\src\\main\\res\\values\\styles.xml",
+                    "source": "C:\\GIT\\flutter-estacionamento\\flutter_estacionamento\\android\\app\\src\\main\\res\\values\\styles.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

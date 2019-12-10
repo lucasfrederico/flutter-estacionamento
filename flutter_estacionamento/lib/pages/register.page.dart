@@ -150,7 +150,7 @@ class RegisterPage extends StatelessWidget {
                 ],
               ),
               borderRadius: BorderRadius.all(
-                Radius.circular(5),
+                Radius.circular(20),
               ),
             ),
             child: SizedBox.expand(
