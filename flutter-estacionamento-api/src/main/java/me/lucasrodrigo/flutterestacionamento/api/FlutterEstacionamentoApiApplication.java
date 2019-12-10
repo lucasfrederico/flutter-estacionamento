@@ -1,4 +1,4 @@
-package me.lucasrodrigo.flutterestacionamentoapi;
+package me.lucasrodrigo.flutterestacionamento.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
