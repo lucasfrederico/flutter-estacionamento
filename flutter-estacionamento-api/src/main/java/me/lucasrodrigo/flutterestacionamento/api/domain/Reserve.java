@@ -3,9 +3,7 @@ package me.lucasrodrigo.flutterestacionamento.api.domain;
 import lombok.Data;
 import org.springframework.data.annotation.CreatedDate;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Data
@@ -13,11 +11,14 @@ import java.time.LocalDateTime;
 public class Reserve {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    private boolean active = false;
 
     @CreatedDate
     private LocalDateTime createdDate;
 
-    @OneToMany()
+    @ManyToOne
     private Account account;
 }
