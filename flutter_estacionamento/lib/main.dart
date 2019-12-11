@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_estacionamento/pages/register.page.dart';
 
 import 'pages/login.page.dart';
 
