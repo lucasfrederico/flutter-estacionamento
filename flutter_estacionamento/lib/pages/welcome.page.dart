@@ -1,7 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter_estacionamento/pages/my-reserves.page.dart';
+import 'package:flutter_estacionamento/pages/vacancies.page.dart';
 
 class WelcomePage extends StatelessWidget {
+  Future _redirectToMyReserves(BuildContext context) async {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => MyReservesPage()));
+  }
+
+  Future _redirectToVacancies(BuildContext context) async {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => VacanciesPage()));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,73 +25,86 @@ class WelcomePage extends StatelessWidget {
             ),
             Container(
               margin: EdgeInsets.only(top: 50, left: 30, right: 30),
-              height: 60,
+              height: 200,
               alignment: Alignment.centerLeft,
-              decoration: BoxDecoration(
-                color: Colors.amber,
-                borderRadius: BorderRadius.all(
-                  Radius.circular(20),
-                ),
-              ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   Expanded(
                     child: SizedBox.expand(
                       child: Builder(
-                        builder: (ctx) => FlatButton(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: <Widget>[
-                              Text(
-                                "Suas Reservas",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white,
-                                  fontSize: 20,
-                                ),
-                                textAlign: TextAlign.left,
-                              ),
-                              Container(
-                                child: SizedBox(
-                                  child: Icon(Icons.calendar_today),
-                                  height: 28,
-                                  width: 28,
-                                ),
-                              )
-                            ],
+                        builder: (ctx) => Container(
+                          decoration: BoxDecoration(
+                            color: Colors.amber,
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(20),
+                            ),
                           ),
-                          onPressed: () => {},
+                          child: FlatButton(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: <Widget>[
+                                Text(
+                                  "Suas Reservas",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                    fontSize: 20,
+                                  ),
+                                  textAlign: TextAlign.left,
+                                ),
+                                Container(
+                                  child: SizedBox(
+                                    child: Icon(Icons.calendar_today),
+                                    height: 28,
+                                    width: 28,
+                                  ),
+                                )
+                              ],
+                            ),
+                            onPressed: () => _redirectToMyReserves(ctx),
+                          ),
                         ),
                       ),
                     ),
                   ),
+                  SizedBox(
+                    height: 20,
+                  ),
                   Expanded(
                     child: SizedBox.expand(
                       child: Builder(
-                        builder: (ctx) => FlatButton(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: <Widget>[
-                              Text(
-                                "Vagas",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white,
-                                  fontSize: 20,
-                                ),
-                                textAlign: TextAlign.left,
-                              ),
-                              Container(
-                                child: SizedBox(
-                                  child: Icon(Icons.directions_car),
-                                  height: 28,
-                                  width: 28,
-                                ),
-                              )
-                            ],
+                        builder: (ctx) => Container(
+                          decoration: BoxDecoration(
+                            color: Colors.amber,
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(20),
+                            ),
                           ),
-                          onPressed: () => {},
+                          child: FlatButton(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: <Widget>[
+                                Text(
+                                  "Vagas",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                    fontSize: 20,
+                                  ),
+                                  textAlign: TextAlign.left,
+                                ),
+                                Container(
+                                  child: SizedBox(
+                                    child: Icon(Icons.directions_car),
+                                    height: 28,
+                                    width: 28,
+                                  ),
+                                )
+                              ],
+                            ),
+                            onPressed: () => _redirectToVacancies(ctx),
+                          ),
                         ),
                       ),
                     ),
