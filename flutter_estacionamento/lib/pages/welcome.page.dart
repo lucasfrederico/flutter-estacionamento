@@ -76,7 +76,7 @@ class WelcomePage extends StatelessWidget {
                       child: Builder(
                         builder: (ctx) => Container(
                           decoration: BoxDecoration(
-                            color: Colors.amber,
+                            color: Colors.lime,
                             borderRadius: BorderRadius.all(
                               Radius.circular(20),
                             ),

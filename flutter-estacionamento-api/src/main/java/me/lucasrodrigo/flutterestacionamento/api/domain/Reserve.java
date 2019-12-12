@@ -23,4 +23,8 @@ public class Reserve {
     @JsonIgnore
     @ManyToOne
     private Account account;
+
+    @OneToOne
+    @JoinColumn(name = "vacancie_id")
+    private Vacancie vacancie;
 }

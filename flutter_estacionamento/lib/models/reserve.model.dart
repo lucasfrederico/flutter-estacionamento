@@ -1,14 +1,14 @@
 class Reserve {
   int id;
   bool active;
-  String createdDate;
+  DateTime createdDate;
 
   Reserve({this.id, this.active, this.createdDate});
 
   Reserve.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     active = json['active'];
-    createdDate = json['createdDate'];
+    createdDate = DateTime.parse(json['createdDate']);
   }
 
   Map<String, dynamic> toJson() {
